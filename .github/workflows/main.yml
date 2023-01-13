@@ -23,7 +23,6 @@ jobs:
         run: doctl registry login --expiry-seconds 600
       - name: Tag image 
         run:
-          docker tag goper-io/python-api \
-          registry.digitalocean.com/goper-io/python-api:${{github.event.inputs.version }}
+          docker tag goper-io/python-api registry.digitalocean.com/goper-io/python-api:${{github.event.inputs.version }}
       - name: Push image to DO Container Registry 
         run: docker push registry.digitalocean.com/goper-io/python-api:${{ github.event.inputs.version }}

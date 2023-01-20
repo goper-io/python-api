@@ -8,8 +8,8 @@ on:
         required: true
         type: choice
         options:
-          - stage
-          - prod
+          - staging
+          - production
 
 jobs:
   build_and_push:

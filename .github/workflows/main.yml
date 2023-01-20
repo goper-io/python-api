@@ -1,11 +1,14 @@
-name: Build and publish manually
+name: Deploy
 
 on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Image version'
+        description: 'Seleccionar ambiente'
         required: true
+        options:
+          - stage
+          - prod
 
 jobs:
   build_and_push:

@@ -23,7 +23,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    PORT = 8000
+    PORT = 80
     # Create an object of the above class
     my_server = socketserver.TCPServer(("0.0.0.0", PORT), Handler)
     # Star the server
